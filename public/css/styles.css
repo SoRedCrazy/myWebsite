@@ -1,0 +1,136 @@
+body {
+  background-color: #1b1c1d;
+  color: #ffffff;
+  position: relative;
+}
+.ui.header {
+  color: #db2828;
+}
+.ui.segment, .ui.segments > .segment, .ui.segment .segment {
+  background-color: #2b2c2d;
+  border: 1px solid #db2828;
+  background-color: #2b2c2d;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);  }
+  
+.ui.segments:not(.horizontal) > .segment:first-child {
+  margin-top: 0;
+  border: 1px solid #db2828;
+  background-color: #2b2c2d;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); 
+}
+.ui.button {
+  background-color: #db2828;
+  color: #ffffff;
+}
+.ui.button:hover {
+  background-color: #ff4c4c;
+}
+.custom-card {
+  background-color: #2b2c2d !important;
+  border: 1px solid #db2828 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
+}
+.custom-card .header {
+  color: #db2828 !important;
+}
+.custom-card .description {
+  color: #ffffff !important;
+}
+.custom-card .extra.content a.ui.button {
+  background-color: #db2828 !important;
+  color: #ffffff !important;
+}
+.custom-card .extra.content a.ui.button:hover {
+  background-color: #ff4c4c !important;
+}
+.ui.fixed.menu {
+  background-color: #1b1c1d;
+  border-bottom: 1px solid #db2828;
+}
+.ui.fixed.menu .item {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.ui.fixed.menu .item.active {
+  color: #db2828;
+}
+.ui.fixed.menu .item:hover {
+  color: #ff4c4c;
+}
+.ui.fixed.menu .container {
+  display: flex;
+  justify-content: center;
+}
+.ui.card.custom-width {
+  width: 100%;
+}
+.ui.card .description {
+  color: #ffffff;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: fadeInOut 10s infinite;
+}
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.circle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.hover-animate:hover {
+  animation: animate__pulse 1s;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  z-index: 100;
+}
+
+.custom-width {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  border: 1px solid #ff4c4c;
+}
+
+.left-align {
+  align-items: flex-start;
+}
+
+.right-align {
+  align-items: flex-end;
+  text-align: justify;
+}
+
+.ui.inverted.vertical.footer.segment {
+  border-top: 1px solid #db2828; 
+  margin-top: 40px; 
+}
+
+a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: #ff4c4c; /* Change color on hover */
+}
+
