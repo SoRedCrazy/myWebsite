@@ -93,3 +93,38 @@ function createRandomCircle() {
 for (let i = 0; i < 20; i++) {
   createRandomCircle();
 }
+
+document.querySelector('form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const response = await fetch('/upload', {
+    method: 'POST',
+    body: formData,
+  });
+  const result = await response.json();
+  displayTransactions(result.transactions, result.balance, result.totalSpent);
+});
+
+const displayTransactions = (transactions, balance, totalSpent) => {
+  const table = document.createElement('table');
+  table.classList.add('ui', 'table');
+  const thead = document.createElement('thead');
+  thead.innerHTML = '<tr><th>Date</th><th>Description</th><th>Amount</th></tr>';
+  table.appendChild(thead);
+  const tbody = document.createElement('tbody');
+  transactions.forEach(transaction => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${transaction.date}</td><td>${transaction.description}</td><td>${transaction.amount.toFixed(2)}</td>`;
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  const balanceDiv = document.createElement('div');
+  balanceDiv.innerHTML = `<strong>Balance:</strong> ${balance}`;
+  const totalSpentDiv = document.createElement('div');
+  totalSpentDiv.innerHTML = `<strong>Total Spent:</strong> ${totalSpent}`;
+  const container = document.getElementById('transaction-table');
+  container.innerHTML = '';
+  container.appendChild(table);
+  container.appendChild(balanceDiv);
+  container.appendChild(totalSpentDiv);
+};
