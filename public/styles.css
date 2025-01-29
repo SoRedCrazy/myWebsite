@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f9fafb;
+}
+h1 {
+  color: #333;
+}
+p {
+  color: #555;
+}
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.btn.accept {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.btn.refuse {
+  background-color: #f44336;
+  color: #fff;
+}

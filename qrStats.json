@@ -1,12 +1,12 @@
 {
   "review": {
-    "count": 15,
+    "count": 20,
     "ips": [
       "::ffff:127.0.0.1"
     ]
   },
   "truck": {
-    "count": 5,
+    "count": 8,
     "ips": [
       "::ffff:127.0.0.1"
     ]
